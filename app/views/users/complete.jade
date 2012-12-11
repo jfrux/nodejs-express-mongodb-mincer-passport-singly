@@ -1,0 +1,45 @@
+extends ../layouts/default
+
+block main
+  h1= title
+
+block content
+  if (typeof errors !== 'undefined')
+    .fade.in.alert.alert-block.alert-error
+      a.close(data-dismiss="alert", href="javascript:void(0)") x
+      ul
+        each error in errors
+          li= error.type
+  div.row
+    div.span2
+      if(user.picture)
+        img(src=user.picture.paths.p)
+      else
+        img(src="http://placehold.it/160x160")
+    div.span6
+      form.signup.form-horizontal(action="/signup/complete", method="post")
+        .control-group
+          label.control-label(for='name') Full name
+          .controls
+            input#name(type='text', name="name", placeholder='Full name', value=user.name)
+
+        .control-group
+          label.control-label(for='email') Email
+          .controls
+            input#email(type='text', name="email", placeholder='Email', value=user.email)
+
+        .control-group
+          label.control-label(for='username') Username
+          .controls
+            input#username(type='text', name="username", placeholder='Username', value=user.username)
+
+        .control-group
+          label.control-label(for='password') Password
+          .controls
+            input#password(type='password', name="password", placeholder='Password', value=user.password)
+
+        .form-actions
+          button.btn.btn-primary(type='submit') Sign up
+          &nbsp;
+          | or&nbsp;
+          a.show-login(href="/login") login

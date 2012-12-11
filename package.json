@@ -1,0 +1,52 @@
+{
+  "description": "This is an example app containing my current workflow stack of express v3, mongoose/mongodb, mincer (assets), passport (auth), singly (centralized oauth)",
+  "name": "nodejs-express-mongodb-mincer-passport-singly",
+  "version": "0.0.1",
+  "private": false,
+  "author": "Joshua F. Rountree <joshua@swodev.com> (http://joshuairl.com/)",
+  "engines": {
+    "node": "0.8.x"
+  },
+  "scripts": {
+    "start": "server.js"
+  },
+  "dependencies": {
+    "express": "3.0.x",
+    "easyimage": "0.1.x",
+    "request": "2.1.x",
+    "express-airmail": "0.1.x",
+    "nodemailer": "0.3.x",
+    "jade": "0.27.x",
+    "ejs": "0.8.x",
+    "activity-streams-mongoose": "0.1.x",
+    "connect-mongodb": "1.1.x",
+    "mongoose": "3.4.x",
+    "passport": "0.1.x",
+    "passport-local": "0.1.x",
+    "passport-singly": "git://github.com/joshuairl/passport-singly.git",
+    "express-singly": "0.3.x",
+    "singly": "latest",
+    "mkdirp": "0.3.x",
+    "underscore": "1.4.x",
+    "node-uuid": "1.4.x",
+    "mincer": "latest",
+    "csso": "latest",
+    "coffee-script": "latest",
+    "less": "latest",
+    "uglify-js": "latest",
+    "async": "0.1.x",
+    "node-upload-progress": "0.0.x",
+    "formidable": "1.0.x",
+    "express-force-domain": "0.0.x"
+  },
+  "devDependencies": {
+    "Faker": "latest",
+    "nodemon": "latest",
+    "stylus": "latest"
+  },
+  "user":"joshuairl",
+  "subdomain": "",
+  "domains": [
+    ""
+  ]
+}

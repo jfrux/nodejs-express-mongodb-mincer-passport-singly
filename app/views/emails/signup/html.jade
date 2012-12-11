@@ -1,0 +1,11 @@
+extends ../base_html
+
+block emailContent
+	strong Hello #{user.username},
+	br
+	| Welcome to Bilddit.
+	br
+	| Your account has been created and you're ready to build, share, and learn!
+	br
+	br
+	mixin button('Login to Continue','login')

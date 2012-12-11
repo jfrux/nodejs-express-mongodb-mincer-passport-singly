@@ -1,0 +1,17 @@
+extends ./default
+
+block main
+  h1 Settings
+
+block content
+  div.row
+    div.span12
+      ul.nav.nav-pills
+        - var items = [{path:"/settings/profile",label:"Edit Profile",className:"profile"},{path:"/settings/password",label:"Change Password",className:"password"},{path:"/settings/invite",label:"Invite Friends",className:"invite"}];
+          each item in items
+            if (req.path == item.path) 
+              li.active
+                a(href=item.path, title=item.label, class=item.className) #{item.label}
+            else
+              li
+                a(href=item.path, title=item.label, class=item.className) #{item.label}

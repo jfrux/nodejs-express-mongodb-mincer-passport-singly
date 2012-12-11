@@ -1,0 +1,14 @@
+extends layouts/default
+block main
+  h1 
+block content
+  #fine-uploader
+  script
+    $(document).ready(function () {
+      $('#jquery-wrapped-fine-uploader').fineUploader({
+          request: {
+          endpoint: 'server/handleUploads'
+        },
+        debug: true
+      });
+    });

@@ -1,0 +1,21 @@
+.combo-button {
+  > a {
+    > span.follow {
+      display:inline-block;
+    }
+
+    > span.unfollow {
+      display:none;
+    }
+    
+    &.on {
+      span.follow {
+        display:none;
+      }
+      span.unfollow {
+        display:inline-block;
+      }
+    }
+  }
+
+}

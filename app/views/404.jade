@@ -1,0 +1,13 @@
+extends layouts/default
+
+block main
+  h1 Not found!
+  br
+  span 404
+
+block content
+  #error-message-box
+    #error-stack-trace
+      - if(showStack)
+        pre
+          code!= error.stack

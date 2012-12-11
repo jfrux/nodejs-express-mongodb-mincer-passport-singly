@@ -1,0 +1,11 @@
+mixin button(label,link)
+  table(cellspacing='0', cellpadding='0', style='border-collapse: collapse;')
+    tbody
+      tr
+        td(style='border-width: 1px; border-style: solid; border-color: #3b6e22 #3b6e22 #2c5115; background-color: #69a74e;')
+          table(cellspacing='0', cellpadding='0', style='border-collapse: collapse;')
+            tbody
+              tr
+                td(style='font-size: 11px; font-family: LucidaGrande,tahoma,verdana,arial,sans-serif; padding: 2px 6px 4px; border-top: 1px solid #95bf82;')
+                  a(target='_blank', style='color: #3b5998; text-decoration: none;', href=link)
+                    span(style='font-weight: bold; white-space: nowrap; color: #fff; font-size: 13px;') #{label}

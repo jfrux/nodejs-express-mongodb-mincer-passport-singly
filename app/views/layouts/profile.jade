@@ -1,0 +1,43 @@
+extends ./default
+
+block content
+  div.profile.row
+    div.profileFrame
+      div.row
+        div.span3
+          div.avatar
+            if(user.picture)
+              img.img-polaroid(src=user.picture.paths.p)
+            else
+              img.img-polaroid(src="http://placehold.it/210x205")
+          div.details
+            div.detailsBox
+
+        div.span9.profileContent
+          div.profileHead
+            h1
+              span.name #{user.name}
+              //- span.addlName #{user.username}
+            div.optionsBar.btn-toolbar
+              if (req.user.username == user.username)
+                div.btn-group
+                  a.btn(href='/settings/profile') 
+                    i.icon-pencil
+                    |  Edit Your Profile
+              else
+                div.btn-group
+                  mixin comboFollow(user);
+                div.btn-group
+            
+          ul.nav.nav-tabs
+            - var items = [{path:"/" + user.username,label:"Projects",className:"projects"},{path:"/" + user.username + "/activity",label:"Public Activity",className:"activity"},{path:"/" + user.username + "/areas",label:"Focus Areas",className:"areas"}]
+            each item in items
+              if (req.path == item.path) 
+                li.active
+                  a(href=item.path, title=item.label, class=item.className) #{item.label}
+              else
+                li
+                  a(href=item.path, title=item.label, class=item.className) #{item.label}
+        
+          div.subcontent  
+            block subcontent

@@ -1,0 +1,18 @@
+mixin comboFollow(user)
+  .btn-group.js-follow-combo.combo-button
+    a.btn(href="/" + user.username + "/follow",class=user.isFollowing ? "on" : "",data-following=user.isFollowing ? "true" : "false")
+      span.follow
+        span.text Follow
+      span.unfollow
+        span.text Unfollow
+  .btn-group
+    a.btn.dropdown-toggle(data-toggle='dropdown', href='#')
+      i.icon-cog
+      span.caret
+    ul.dropdown-menu
+      li
+        a(href='')
+          | Report Abuse
+      li
+        a(href='')
+          | Block #{user.username}

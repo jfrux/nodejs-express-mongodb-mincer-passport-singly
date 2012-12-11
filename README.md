@@ -1,4 +1,2 @@
-nodejs-express-mongodb-mincer-passport-singly
-=============================================
-
-This is a base app containing my current workflow stack of express v3, mongoose/mongodb, mincer (assets), passport (auth), singly (centralized oauth)
+#nodejs-express-mongodb-passport-singly-mincer-airmail-jade-and more.
+This is a base stack I've been trying out...

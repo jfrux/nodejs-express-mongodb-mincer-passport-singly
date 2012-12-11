@@ -1,0 +1,13 @@
+extends ../base_html
+
+block emailContent
+  strong Hello #{user.username},
+  br
+  if(follower.picture)
+    img(src=follower.picture.paths.i)
+  | Just wanted to let you know that 
+  strong #{follower.name} 
+  | started following you on Bilddit.
+  br
+  br
+  mixin button('Login to Continue','login')
