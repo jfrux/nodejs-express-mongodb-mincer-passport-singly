@@ -5,16 +5,16 @@ head(prefix='og: http://ogp.me/ns# nodejsexpressdemo: http://ogp.me/ns/apps/node
 
   title= title || appName
   meta(http-equiv='Content-type', content='text/html;charset=UTF-8')
-  meta(name="keywords", content="build,share,diy,do,it,yourself,projects,social,network,community,profiles")
-  meta(name="description", content="A place to share and build diy projects in a new and exciting way.")
+  meta(name="keywords", content="my,keywords,here")
+  meta(name="description", content="My description here.")
   link(href='/favicon.ico', rel='shortcut icon', type='image/x-icon')
   //Opengraph tags
   meta(property='og:title', content='#{appName} - #{title}')
-  meta(property='og:description', content='A place to share and build diy projects in a new and exciting way.')
+  meta(property='og:description', content='My description here.')
   meta(property='og:type', content='website')
   meta(property='og:url', content='http://myapp.com/')
   meta(property='og:image', content='http://myapp.com/img/myapp_75px.png')
-  meta(property='og:site_name', content='Node.js Express Mongoose Demo')
+  meta(property='og:site_name', content='My App Name')
   if (stylesheet)
     !=stylesheet('application.css')
   
