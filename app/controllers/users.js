@@ -124,7 +124,7 @@ exports.follow = function (req, res) {
           res.airmail.send('emails/follow/html', 
             { user:leader, //user is always required
               follower:follower },
-            {to: req.user.email, subject: req.user.name + " started following you on Bilddit" },
+            {to: req.user.email, subject: req.user.name + " started following you on myapp" },
             function(err, mail) {
               if(err) return console.log(err);
           });  
